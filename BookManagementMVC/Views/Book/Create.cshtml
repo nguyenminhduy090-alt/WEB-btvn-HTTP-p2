@@ -1,0 +1,24 @@
+@model BookManagementMVC.Models.Book
+
+<h2>Thêm sách</h2>
+
+<form method="post">
+
+<label>Tên sách</label><br/>
+<input type="text" name="Name"/>
+
+<br/><br/>
+
+<label>Giá</label><br/>
+<input type="number" name="Price"/>
+
+<br/><br/>
+
+<button type="submit">Thêm</button>
+
+</form>
+
+@if(ViewBag.Message != null)
+{
+<h3>@ViewBag.Message</h3>
+}

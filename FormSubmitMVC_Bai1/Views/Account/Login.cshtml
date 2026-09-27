@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "Login";
+    <style>
+
+        form {
+            display: flex;
+            align-items: end;
+            gap: 15px;
+            flex-wrap: wrap; /*xuống dòng */
+        }
+
+
+        .form-group {
+            display: flex;
+            flex-direction: column; /* Sắp xếp label trên input */
+        }
+
+
+        label {
+            margin-bottom: 5px;
+        }
+
+
+        input {
+            width: 220px;
+            height: 35px;
+        }
+
+
+        button {
+            height: 35px;
+            padding: 0 20px;
+        }
+
+
+    </style>
+}
+
+<h2>Form Submit cơ bản</h2>
+
+<form method="post" action="/Account/Login">
+
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" />
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" />
+    </div>
+
+    <button type="submit">Login</button>
+
+</form>
+@if (ViewBag.Message != null)
+{
+    <h3>@ViewBag.Message</h3>
+}
+
+<p>
+    Tài khoản test:
+    <b>admin</b> /
+    <b>123</b>
+</p>

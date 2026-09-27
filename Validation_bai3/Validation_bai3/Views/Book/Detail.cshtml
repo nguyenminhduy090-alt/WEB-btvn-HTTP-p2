@@ -1,0 +1,14 @@
+@model BookManagementMVC.Models.Book
+
+<h2>Chi tiết sách</h2>
+
+@if(Model != null)
+{
+<p>ID: @Model.Id</p>
+<p>Tên sách: @Model.Name</p>
+<p>Giá: @Model.Price</p>
+}
+else
+{
+<p>Không tìm thấy sách</p>
+}
